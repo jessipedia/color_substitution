@@ -3,30 +3,42 @@
   <head>
   	<meta charset="UTF-8">
     <title>Text</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Source+Sans+Pro:300i,400" rel="stylesheet">
   </head>
   <body>
-  	<h3>a2z Week 1</h3>
-  	<h1>Color Substitution</h1>
-    <p> <span class="three" id="box">The</span> 
-    	<span class="five">quick</span> 
-    	<span class="three">red</span> 
-    	<span class="three">fox</span> 
-    	<span class="six">jumped</span> 
-    	<span class="four">over</span> 
-    	<span class="three">the</span> 
-    	<span class="four">lazy</span> 
-    	<span class="five">brown</span> 
-    	<span class="three">dog</span>
-    	.
+  	<div id="header">
+	  	<h3>a2z Week 1</h3>
+	  	<h1>Color Substitution</h1>
+	</div>
+  	<div id="content">
+	  	<h2>Directions</h2>
+	  	<ol>
+	  		<li>Select a text.</li>
+	  		<li>Count the number of letters in each word in the text.</li>
+	  		<li>Assign a color to each number.</li>
+	  		<li>Replace the space taken up by the word with a rectangle.</li>
+	  		<li>The color of the rectangle should correspond with the number of letters in the word it replaces.</li>
+	  	</ol>
 
+	  	<h2>Example</h2>
+	  	<p id="tip">Mouse over to replace text.</p>
+	    <p> <span class="three">The</span> 
+	    	<span class="five">quick</span> 
+	    	<span class="three">red</span> 
+	    	<span class="three">fox</span> 
+	    	<span class="six">jumped</span> 
+	    	<span class="four">over</span> 
+	    	<span class="three">the</span> 
+	    	<span class="four">lazy</span> 
+	    	<span class="five">brown</span> 
+	    	<span class="three">dog</span>
+	    	.
+
+	    </p>
+	</div>
     	<script>
-
-    	//This function isn't mine, credit: https://gist.github.com/jjmu15/8646098
-    	function hasClass(el, cls) {
- 			 return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
-		}
 
     	var colorBox = d3.selectAll('span')
     		.on('mouseover', function (d){
@@ -72,7 +84,6 @@
 
 
     	</script>
-    </p>
   </body>
 <!--
 			var points = chart1.selectAll('circle'){}

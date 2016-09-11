@@ -1,19 +1,39 @@
-.three{
+h1 {
 
-	background-color: DodgerBlue;
+	font-family: 'Bitter', serif;
+}
+h2 {
+
+	font-family: 'Bitter', serif;
 }
 
-.four{
+h3 {
 
-	background-color: DarkTurquoise;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
-.five{
+ol {
 
-	background-color: MediumAquamarine;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
-.six{
+p {
 
-	background-color: Gold;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+#content{
+
+	margin-left: 100px;
+}
+
+#header{
+	margin-left: 50px;
+	margin-top: 20px;
+	
+}
+
+#tip{
+	margin-top: -15px;
+	font-style: italic;
 }
