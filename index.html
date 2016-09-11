@@ -1,10 +1,105 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<meta charset="UTF-8">
     <title>Text</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
   </head>
   <body>
-    <p><span>The</span> <span>quick</span> <span>red</span> <span>fox</span> <span>jumped</span> 
-    	<span>over</span> <span>the</span> <span>lazy</span> <span>brown</span> <span>dog.</span></p>
+  	<h3>a2z Week 1</h3>
+  	<h1>Color Substitution</h1>
+    <p> <span class="three" id="box">The</span> 
+    	<span class="five">quick</span> 
+    	<span class="three">red</span> 
+    	<span class="three">fox</span> 
+    	<span class="six">jumped</span> 
+    	<span class="four">over</span> 
+    	<span class="three">the</span> 
+    	<span class="four">lazy</span> 
+    	<span class="five">brown</span> 
+    	<span class="three">dog</span>
+    	.
+
+    	<script>
+
+    	//This function isn't mine, credit: https://gist.github.com/jjmu15/8646098
+    	function hasClass(el, cls) {
+ 			 return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
+		}
+
+    	var colorBox = d3.selectAll('span')
+    		.on('mouseover', function (d){
+    			d3.select(this)
+    			.style('background-color', function(d){
+    				if (this.className === 'three') {
+    					return 'DodgerBlue'
+    				}
+
+    				if (this.className === 'four') {
+    					return 'DarkTurquoise'
+    				}
+
+    				if (this.className === 'five') {
+    					return 'MediumAquamarine'
+    				}
+
+    				if (this.className === 'six') {
+    					return 'Gold'
+    				}
+    			})
+    			.style('color', function(d){
+    				if (this.className === 'three') {
+    					return 'DodgerBlue'
+    				}
+
+    				if (this.className === 'four') {
+    					return 'DarkTurquoise'
+    				}
+
+    				if (this.className === 'five') {
+    					return 'MediumAquamarine'
+    				}
+
+    				if (this.className === 'six') {
+    					return 'Gold'
+    				}
+    			})
+
+
+    		})
+
+
+
+    	</script>
+    </p>
   </body>
+<!--
+			var points = chart1.selectAll('circle'){}
+	       .on('mouseover', function (d){
+
+            tempColor = this.style.fill
+
+          d3.select(this)
+            .style('fill', 'orange')
+
+
+          tooltip.transition()
+            .style('opacity', .8)
+
+          tooltip.html(d.PoliceDepartment + " Police Department"  + "<br/>" + "Police Killings Rate: " + d.PoliceKillingsRate)
+            .style('left', (d3.event.pageX - 35) + 'px')
+            .style('top', (d3.event.pageY - 60) + 'px')
+            .attr('class', 'tooltip')
+
+
+        })
+        .on('mouseout', function (d){
+          d3.select(this)
+            .style('fill', tempColor);
+
+          tooltip.transition()
+            .style('opacity', 0)
+        })
+        -->
 </html>
