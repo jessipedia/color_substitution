@@ -4,7 +4,11 @@
   	<meta charset="UTF-8">
     <title>Text</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="_/d3.min.js"></script>
+    <!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+    <script src="_/p5.min.js" type="text/javascript"></script>
+    <script src="_/p5.dom.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript" src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Bitter|Source+Sans+Pro:300i,400" rel="stylesheet">
   </head>
   <body>
@@ -20,7 +24,7 @@
 	  		<li>Replace the space taken up by the word with a rectangle.</li>
 	  		<li>The color of the rectangle should correspond with the number of letters in the word it replaces.</li>
 	  	</ol>
-	  	<h2>Example</h2>
+      <!--	<h2>Example</h2>
 	  	<p id="tip">Mouse over to replace text.</p>
 	  	<div class="text">
 	    <p> <span class = "eight">CALABAZO</span>,
@@ -135,141 +139,28 @@
 	</div>
 
 	    <p id="ref">Text from 'The Secret History of Colombia’s Paramilitaries and the U.S. War on Drugs'</p>
-
+-->
 
   <h2>Try It Yourself</h2>
-  <p id="tip">This doesn't work yet.</p>
-
-
+  <p id="tip">Paste text here to create a color substitution. Mouse over text to replace.</p>
 
   <form id="userInput" class="text">
-<div id = "user_text"></div>
+
     <div >
       <textarea id="msg" name="user_message" class="message_box"></textarea>
     </div>
 </form>
     <div class="button">
-      <button onclick="outputtext()"> Submit </button>
+      <!--<button onclick="outputtext()" > Submit </button>-->
+      <button id="submit" onClick="outputtext()"> Submit </button>
     </div>
 
+<div class="text">
+<p id ="user_text"></p>
+</div>
 
 
 
   </div>
   </body>
-
-    	<script>
-
-      function outputtext(){
-        var textinput = document.getElementById("userInput");
-        var text = textinput.elements["user_message"].value;
-        document.getElementById("user_text").innerHTML="<p>"+text+"</p>";
-        console.log(text);
-
-      }
-      </script>
-      <script>
-
-    	var colorBox = d3.selectAll('span')
-    		.on('mouseover', function (d){
-    			d3.select(this)
-    			.style('background-color', function(d){
-    				if (this.className === 'one') {
-    					return 'BurlyWood'
-    				}
-
-    				if (this.className === 'two') {
-    					return 'Tan'
-    				}
-
-    				if (this.className === 'three') {
-    					return 'RosyBrown'
-    				}
-
-    				if (this.className === 'four') {
-    					return 'SandyBrown'
-    				}
-    				if (this.className === 'five') {
-    					return 'Goldenrod'
-    				}
-
-    				if (this.className === 'six') {
-    					return 'DarkGoldenrod'
-    				}
-
-    				if (this.className === 'seven') {
-    					return 'Peru'
-    				}
-
-    				if (this.className === 'eight') {
-    					return 'Chocolate'
-    				}
-    				if (this.className === 'nine') {
-    					return 'SaddleBrown'
-    				}
-
-    				if (this.className === 'ten') {
-    					return 'Sienna'
-    				}
-
-    				if (this.className === 'eleven') {
-    					return 'Brown'
-    				}
-
-    				if (this.className === 'twelve') {
-    					return 'Maroon'
-    				}
-    			})
-    			.style('color', function(d){
-    				if (this.className === 'one') {
-    					return 'BurlyWood'
-    				}
-
-    				if (this.className === 'two') {
-    					return 'Tan'
-    				}
-
-    				if (this.className === 'three') {
-    					return 'RosyBrown'
-    				}
-
-    				if (this.className === 'four') {
-    					return 'SandyBrown'
-    				}
-    				if (this.className === 'five') {
-    					return 'Goldenrod'
-    				}
-
-    				if (this.className === 'six') {
-    					return 'DarkGoldenrod'
-    				}
-
-    				if (this.className === 'seven') {
-    					return 'Peru'
-    				}
-
-    				if (this.className === 'eight') {
-    					return 'Chocolate'
-    				}
-    				if (this.className === 'nine') {
-    					return 'SaddleBrown'
-    				}
-
-    				if (this.className === 'ten') {
-    					return 'Sienna'
-    				}
-
-    				if (this.className === 'eleven') {
-    					return 'Brown'
-    				}
-
-    				if (this.className === 'twelve') {
-    					return 'Maroon'
-    				}
-    			})
-
-
-    		})
-
-    	</script>
 </html>
